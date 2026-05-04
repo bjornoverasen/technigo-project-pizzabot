@@ -100,8 +100,39 @@ if (name === null || name.trim() === "") {
   } else {
     alert(`You selected ${subtype} ${food}. Excellent choice!`);
 
-// Step 4 - Age
-// Your code goes here
+    // Step 4 - Age 
+    // In this iteration, the program should prompt the user to specify if the food is intended for a child or 
+    // an adult. The prompt() method should be used to present the question and get the user's input. Based on 
+    // the user's answer, an appropriate order message should be constructed. The program should use the alert
+    // () method to display the order message and the associated cost. The user's confirmation should be 
+    // obtained using the prompt() method.
+    // Your code goes here
+    const ageCategory = prompt(
+      "Is this order for:\n1) Child\n2) Adult\n(Enter 1 or 2)"
+    );
+
+    let ageGroup;
+    let cost;
+
+    switch (ageCategory) {
+      case "1":
+        ageGroup = "Child";
+        cost = 8;
+        break;
+      case "2":
+        ageGroup = "Adult";
+        cost = 12;
+        break;
+      default:
+        ageGroup = null;
+    }
+
+    if (!ageGroup) {
+      alert("Invalid age choice. Please reload and try again.");
+    } else {
+      const orderMessage =
+        `Order for ${ageGroup}: ${subtype} ${food}. Total cost: $${cost}.`;
+      alert(orderMessage);
 
 // Step 5 - Order confirmation
 // Your code goes here
