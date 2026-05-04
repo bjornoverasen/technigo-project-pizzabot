@@ -1,12 +1,17 @@
 // Start here
 
 // Step 1 - Welcome and introduction
-// a) In this first iteration, you'll find a pre-written code snippet that generates a welcoming message 
-// and introduction for the user. This is done to give you a hint about how it can be implemented. The 
-// alert() method will greet the user. Open up the page in the browser to try it out, feel free to change 
+// a) In this first iteration, you'll find a pre-written code snippet that generates a welcoming 
+// message 
+// and introduction for the user. This is done to give you a hint about how it can be 
+// implemented. The 
+// alert() method will greet the user. Open up the page in the browser to try it out, feel free 
+// to change 
 // the text appearing in the alert.
-// b) After that, your task is to ask for the user’s name. Look into the prompt() method to do this. The 
-// great thing about the prompt method is that you can store the input in a variable. So, write a prompt 
+// b) After that, your task is to ask for the user’s name. Look into the prompt() method to do 
+// this. The 
+// great thing about the prompt method is that you can store the input in a variable. So, write a 
+// prompt 
 // to ask for the name and store the answer in a variable.
 // c) Create a new alert using the name variable to say something like “Hi and welcome, Madonna!”
 
@@ -22,14 +27,18 @@ if (name === null || name.trim() === "") {
   alert(`Hi and welcome, ${name}!`);
 
   // Step 2 - Food choice 
-  // The goal of this iteration is to allow the user to select the type of food they want to order. If you 
+  // The goal of this iteration is to allow the user to select the type of food they want to 
+  // order. If you 
   // check the provided working example, you can see that our Javascript Pizzeria offers:
   // Pizza
   // Pasta
   // Salad
-  // The program should use the prompt() method to present the user with a menu of options (Pizza, Pasta, 
-  // Salad) and prompt them to enter a number corresponding to their choice. Based on the user's input, 
-  // the program should determine the chosen food type (Pizza, Pasta, Salad) and display a message using 
+  // The program should use the prompt() method to present the user with a menu of options 
+  // (Pizza, Pasta, 
+  // Salad) and prompt them to enter a number corresponding to their choice. Based on the user's 
+  // input, 
+  // the program should determine the chosen food type (Pizza, Pasta, Salad) and display a 
+  // message using 
   // the alert() method to confirm the user selection.
 
   // Your code goes here
@@ -54,10 +63,14 @@ if (name === null || name.trim() === "") {
     alert(`You selected ${food}. Great choice!`);
   }
 
-  // Step 3 - Subtype choice - For this iteration, the focus is on enabling the user to choose a subtype of 
-  // the selected food type. Depending on the previously chosen food type (Pizza, Pasta, Salad), the program 
-  // should present the user with subtype options specific to that food type. The prompt() method should be 
-  // used to get the user's input. The program should then determine the chosen subtype and provide feedback 
+  // Step 3 - Subtype choice - For this iteration, the focus is on enabling the user to choose a 
+  // subtype of 
+  // the selected food type. Depending on the previously chosen food type (Pizza, Pasta, Salad), 
+  // the program 
+  // should present the user with subtype options specific to that food type. The prompt() method 
+  // should be 
+  // used to get the user's input. The program should then determine the chosen subtype and 
+  // provide feedback 
   // using the alert() method to confirm the selection. Tip: Use conditional statements for this.
 
   // Your code goes here
@@ -101,10 +114,14 @@ if (name === null || name.trim() === "") {
     alert(`You selected ${subtype} ${food}. Excellent choice!`);
 
     // Step 4 - Age 
-    // In this iteration, the program should prompt the user to specify if the food is intended for a child or 
-    // an adult. The prompt() method should be used to present the question and get the user's input. Based on 
-    // the user's answer, an appropriate order message should be constructed. The program should use the alert
-    // () method to display the order message and the associated cost. The user's confirmation should be 
+    // In this iteration, the program should prompt the user to specify if the food is intended 
+    // for a child or 
+    // an adult. The prompt() method should be used to present the question and get the user's 
+    // input. Based on 
+    // the user's answer, an appropriate order message should be constructed. The program should 
+    // use the alert
+    // () method to display the order message and the associated cost. The user's confirmation 
+    // should be 
     // obtained using the prompt() method.
     // Your code goes here
     const ageCategory = prompt(
@@ -130,9 +147,30 @@ if (name === null || name.trim() === "") {
     if (!ageGroup) {
       alert("Invalid age choice. Please reload and try again.");
     } else {
+
+
+      // Step 5 - Order confirmation
+      // The final iteration involves confirming the user's order based on 
+      // their previous choices. The program should evaluate the user's confirmation, and if the 
+      // user 
+      // confirms, a thank you message should be displayed using the alert() method, telling them 
+      // that 
+      // their meal will be prepared. If the user declines, a polite farewell message should be 
+      // displayed using the alert() method, encouraging them to return for future orders.
+
+      // Your code goes here
       const orderMessage =
         `Order for ${ageGroup}: ${subtype} ${food}. Total cost: $${cost}.`;
       alert(orderMessage);
+      const confirmOrder = prompt(
+        "Please confirm order. Type YES to confirm or NO to cancel."
+      );
 
-// Step 5 - Order confirmation
-// Your code goes here
+      if (confirmOrder && confirmOrder.trim().toLowerCase() === "yes") {
+        alert("Order confirmed! Thank you for your purchase.");
+      } else {
+        alert("Order canceled. Reload and start again if you want to order.");
+      }
+    }
+  }
+}
