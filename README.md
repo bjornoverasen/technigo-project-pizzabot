@@ -13,6 +13,5 @@ Every project should be deployed somewhere. Be sure to include the link to the d
 
 En av målsättningarna är att "Deploy your page to Cloudflare and add it to the Readme file of the repository". 
 Här har ni länken till Cloudfare: 
-https://43a88b18.technigo-project-pizzabot.pages.dev/
+https://technigo-project-pizzabot.pages.dev/
 
-d
